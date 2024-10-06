@@ -7,27 +7,27 @@ import Body from './Body';
 import Picture from './picture';
 
 const links = [
-    {  
-        title: "Home",
-        href: "/",
-        src: "/"
-    },
-    {
-        title: "About ME",
-        href: "/about",
-        src: "/"
-    },
-    {
-        title: "Collection",
-        href: "/collection", 
-        src: "/"
-    },
-    {
-        title: "Contact",
-        href: "/contact",
-        src: "/"
-    }
-]
+  {
+    title: "Home",
+    href: "/",
+    src: "/",
+  },
+  {
+    title: "Collections",
+    href: "/collection",
+    src: "/",
+  },
+  {
+    title: "About",
+    href: "/about",
+    src: "/",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+    src: "/",
+  },
+];
 
 export default function Nav() {
     const [selectedLink, setSelectedLink] = useState({isActive: false, index: 0});

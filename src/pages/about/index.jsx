@@ -21,9 +21,9 @@ export default function About() {
   return (
     <Layout>
       <main className={styles.main}>
-        <Intro/>
-        <Description/>
-        {/* <Timeline/> */}
+        <Intro />
+        <Description />
+        <Timeline />
       </main>
     </Layout>
   );

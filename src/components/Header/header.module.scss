@@ -3,7 +3,8 @@
     // position: sticky;
     width: 100%;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 20px;
+    // height: fit-content;
     z-index: 10000000;
 }
 
@@ -45,6 +46,7 @@
 .label{
     position: relative;
     display: flex;
+    margin-top: 20px;
     align-items: center;
     height: 100%;
 }
@@ -76,6 +78,7 @@
     width: 22.5px;
     position: relative;
     pointer-events: none;
+    margin-top: 20px;
 }
 
 .burger::after, .burger::before{
@@ -107,7 +110,7 @@
 
 @media only screen and (min-width: 600px) {
     .header{
-        padding: 20px;
+        padding-top: 2px;
     }
     .bar{
         font-size: 15px;
@@ -116,5 +119,10 @@
     .shop{
         display: block;
         cursor: pointer;
+        margin-bottom: 1000px;
     }
+}
+
+.logo{
+  margin-bottom: 10px;
 }

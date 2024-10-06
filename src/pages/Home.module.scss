@@ -1,0 +1,163 @@
+.main {
+    padding: 20px;
+}
+
+.hero {
+    background-image: url('/path/to/hero-image.jpg');
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); // Dark overlay for better text visibility
+        z-index: 1;
+    }
+
+    .heroContent {
+        position: relative;
+        z-index: 2; // Ensure content is above the overlay
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .ctaButton {
+            padding: 10px 20px;
+            background-color: #ff6347; // Tomato color
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            &:hover {
+                background-color: #e5533d; // Darker shade on hover
+            }
+        }
+    }
+}
+
+.featuredWorks {
+    padding: 40px 20px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+
+        .artworkCard {
+            position: relative;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px; // Rounded corners
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: scale(1.05); // Zoom effect on hover
+                }
+            }
+
+            h3 {
+                text-align: center;
+                margin-top: 10px;
+                font-size: 1.2rem; // Adjust size as needed
+            }
+        }
+    }
+}
+
+.aboutArtist {
+    padding: 40px 20px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        text-align: center; // Centered bio text
+        max-width: 600px; // Limit width for readability
+        margin-left:auto; 
+        margin-right:auto; 
+    }
+
+    .artistImage {
+        display:block; 
+        margin-left:auto; 
+        margin-right:auto; 
+        border-radius :50%; // Circular image for the artist
+        width :200px; // Fixed size for consistency
+    }
+}
+
+.testimonials {
+    padding: 40px 20px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    blockquote {
+        font-style: italic; 
+        text-align:center; 
+        max-width :600px; 
+        margin-left:auto; 
+        margin-right:auto; 
+    }
+}
+
+.newsletter {
+    padding: 40px 20px;
+
+    h2 {
+        text-align:center; 
+        margin-bottom :20px; 
+    }
+
+    .newsletterForm {
+       display:flex; 
+       justify-content:center;
+
+       input[type="email"] {
+           padding :10px; 
+           border:none; 
+           border-radius :5px; 
+           margin-right :10px; 
+       }
+
+       button {
+           padding :10px ; 
+           background-color :#ff6347 ; 
+           color:white ; 
+           border:none ; 
+           border-radius :5px ; 
+
+           &:hover{
+               background-color:#e5533d ; 
+           }
+       }
+   }
+}

@@ -1,0 +1,57 @@
+// src/pages/Contact.module.scss
+
+.contactContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; // Space between inputs
+
+    input,
+    textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+
+        &:focus {
+            border-color: #ff6347; // Tomato color on focus
+            outline: none;
+        }
+    }
+
+    button {
+        padding: 10px;
+        background-color: #ff6347; // Tomato color
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #e5533d; // Darker shade on hover
+        }
+    }
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+/* SVG Decoration Styles */
+.svgDecoration {
+    position: absolute; /* Position it as needed */
+    top: 20%; /* Adjust based on design */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; /* Adjust size */
+}

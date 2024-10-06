@@ -1,12 +1,60 @@
 import Layout from "@/components/layout";
-
+import styles from "./Home.module.scss";
+import Link from "next/link";
 export default function Home() {
-
   return (
-      <Layout>
-        <div className="website-content">
-          <h1>Hello World</h1>
-        </div>
-      </Layout>
+    <Layout>
+      <div className="website-content">
+        <main className={styles.main}>
+          {/* Hero Section */}
+          <section className={styles.hero}>
+            <div className={styles.heroContent}>
+              <h1>Art that Speaks</h1>
+              <p>“Every canvas is a journey all its own.”</p>
+
+              <Link className={styles.ctaButton} href="/collection">
+                Explore Collection
+              </Link>
+            </div>
+          </section>
+
+          {/* Featured Works Section */}
+
+          {/* About the Artist Section */}
+          <section className={styles.aboutArtist}>
+            <h2>About the Artist</h2>
+            <p>
+              A brief bio about the artist goes here. Highlight their style,
+              inspiration, and journey.
+            </p>
+            <img
+              src="/path/to/artist-image.jpg"
+              alt="Artist"
+              className={styles.artistImage}
+            />
+          </section>
+
+          {/* Testimonials Section */}
+          <section className={styles.testimonials}>
+            <h2>What People Are Saying</h2>
+            <blockquote>
+              “Stunning work! Each piece tells a story.” - Art Critic
+            </blockquote>
+            <blockquote>
+              “A true talent! I can't wait to see more.” - Art Collector
+            </blockquote>
+          </section>
+
+          {/* Newsletter Signup Section */}
+          <section className={styles.newsletter}>
+            <h2>Stay Updated</h2>
+            <form className={styles.newsletterForm}>
+              <input type="email" placeholder="Your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+          </section>
+        </main>
+      </div>
+    </Layout>
   );
 }
