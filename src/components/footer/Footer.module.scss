@@ -1,0 +1,56 @@
+// src/components/Footer.module.scss
+
+.footer {
+    background-color: #f4f0ea;
+    color: white; /* White text */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px; /* Limit width */
+    margin: 0 auto; /* Center align */
+    padding: 0 20px; /* Side padding */
+}
+
+.links {
+    margin-bottom: 15px;
+
+    a {
+        color: black;
+        text-decoration: none;
+        margin: 0 15px;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #ff6347; /* Tomato color on hover */
+        }
+    }
+}
+
+.socialMedia {
+    margin-bottom: 15px;
+    color: black;
+
+    a {
+        margin: 0 10px;
+
+        img {
+            width: 24px; /* Icon size */
+            height: 24px;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.1); /* Slight zoom on hover */
+            }
+        }
+    }
+}
+
+.contactInfo {
+    color: black;
+    p {
+        margin: 5px 0; /* Spacing between lines */
+        color: black;
+    }
+}

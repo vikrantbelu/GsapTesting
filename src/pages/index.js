@@ -21,7 +21,7 @@ export default function Home() {
           {/* Featured Works Section */}
 
           {/* About the Artist Section */}
-          <section className={styles.aboutArtist}>
+          {/* <section className={styles.aboutArtist}>
             <h2>About the Artist</h2>
             <p>
               A brief bio about the artist goes here. Highlight their style,
@@ -32,10 +32,10 @@ export default function Home() {
               alt="Artist"
               className={styles.artistImage}
             />
-          </section>
+          </section> */}
 
           {/* Testimonials Section */}
-          <section className={styles.testimonials}>
+          {/* <section className={styles.testimonials}>
             <h2>What People Are Saying</h2>
             <blockquote>
               “Stunning work! Each piece tells a story.” - Art Critic
@@ -43,16 +43,16 @@ export default function Home() {
             <blockquote>
               “A true talent! I can't wait to see more.” - Art Collector
             </blockquote>
-          </section>
+          </section> */}
 
           {/* Newsletter Signup Section */}
-          <section className={styles.newsletter}>
+          {/* <section className={styles.newsletter}>
             <h2>Stay Updated</h2>
             <form className={styles.newsletterForm}>
               <input type="email" placeholder="Your email" required />
               <button type="submit">Subscribe</button>
             </form>
-          </section>
+          </section> */}
         </main>
       </div>
     </Layout>
