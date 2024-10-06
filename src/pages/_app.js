@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import PageTransition from "@/components/PageTransition";
 import Preloader from "@/components/pagepreloader/preloader";
 import { useEffect, useState } from "react";
-
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [loading, setLoading] = useState(true); // State to manage loading
@@ -27,10 +28,15 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      {loading && <Preloader/>} {/* Show preloader when loading */}
+      {loading && <Preloader />} {/* Show preloader when loading */}
       <AnimatePresence mode="wait">
         <motion.div key={router.pathname}>
           <PageTransition>
+            <style jsx global>{`
+              html {
+                font-family: ${inter.style.fontFamily};
+              }
+            `}</style>
             <Component {...pageProps} />
           </PageTransition>
         </motion.div>

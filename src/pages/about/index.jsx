@@ -23,7 +23,7 @@ export default function About() {
       <main className={styles.main}>
         <Intro />
         <Description />
-        <Timeline />
+        {/* <Timeline /> */}
       </main>
     </Layout>
   );

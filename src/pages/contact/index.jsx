@@ -17,7 +17,7 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
+  const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -29,7 +29,7 @@ const Contact = () => {
       },
       body: JSON.stringify({
         ...formData,
-        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY, // Access key as a string
+        access_key: accessKey, // Access key as a string
       }),
     });
 

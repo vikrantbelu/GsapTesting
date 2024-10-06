@@ -28,7 +28,7 @@ export default function Home() {
               inspiration, and journey.
             </p>
             <img
-              src="/path/to/artist-image.jpg"
+              src="https://images.pexels.com/photos/102127/pexels-photo-102127.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="Artist"
               className={styles.artistImage}
             />
