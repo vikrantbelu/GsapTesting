@@ -1,33 +1,39 @@
-import Layout from '@/components/layout'
-import styles from '../../styles/collection.module.css'
-import { gsap } from "gsap"
-import Link from 'next/link'
-import react from "react";
-const collections = [
-  {
-    title: "Immersionism",
-  },
-  {
-    title: "Sketches",
-  },
-  {
-    title: "Charcoal Sketches",
-  },
-  {
-    title: "Commission Works",
-  },
-];
+import Layout from "@/components/layout";
+import styles from "../../styles/collection.module.css";
+import { gsap } from "gsap";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
-export default function Collection({ products, categories }) {
+export default function Collection() {
+  const [categories, setCategories] = useState([]); // State to hold categories
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch("/api/categories"); // Fetch categories from the API
+        if (!response.ok) throw new Error("Failed to fetch categories");
+        const data = await response.json();
+
+        console.log("Fetched categories:", data); // Log fetched categories for debugging
+
+        setCategories(data); // Set the fetched categories
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
   const manageMouseEnter = (e, index) => {
     gsap.to(e.target, {
       top: "-2vw",
-      backgroundColor: collections[index].color,
+      backgroundColor: "lightgray", // Adjust color as needed
       duration: 0.3,
     });
   };
 
-  const manageMouseLeave = (e, index) => {
+  const manageMouseLeave = (e) => {
     gsap.to(e.target, {
       top: "0",
       backgroundColor: "white",
@@ -41,58 +47,23 @@ export default function Collection({ products, categories }) {
       <div className={styles.container}>
         <div className={styles.collectionContainer}>
           <p className={styles.heading}>Collections:</p>
-          {collections.map((collection, index) => {
-            return (
-              <Link href={`/categories/${collection.title}`}  className={styles.linkz} >
-                <div
-                  className={styles.collection}
-                  onMouseEnter={(e) => {
-                    manageMouseEnter(e, index);
-                  }}
-                  onMouseLeave={(e) => {
-                    manageMouseLeave(e, index);
-                  }}
-                  key={index}
-                >
-                  <p>{collection.title}</p>
-                </div>
-              </Link>
-            );
-          })}
+          {categories.map((category) => (
+            <Link
+              href={`/categories/${category.name}`} // Use category name for routing
+              key={category._id} // Use unique ID as key
+              className={styles.linkz}
+            >
+              <div
+                className={styles.collection}
+                onMouseEnter={(e) => manageMouseEnter(e, category._id)}
+                onMouseLeave={manageMouseLeave}
+              >
+                <p>{category.name}</p> {/* Displaying category name */}
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
-      {/* <div>
-        <h1>Products</h1>
-        {products.map((product) => (
-          <div key={product._id}>
-            <h2>{product.title}</h2>
-            <p>{product.description}</p>
-            <p>Available Sizes: {product.availableSizes.join(", ")}</p>
-            <img
-              src={product.imageUrl}
-              alt={product.title}
-              style={{ width: "200px" }}
-            />
-            <p>Category: {product.category}</p>
-          </div>
-        ))}
-      </div> */}
-      {/* <div>
-        <h1>Categories</h1>
-        {categories.map((category) => (
-          <Link key={category} href={`/categories/${category}`}>
-            <p style={{ display: "block", margin: "10px 0" }}>{category}</p>
-          </Link>
-        ))}
-      </div> */}
     </Layout>
   );
 }
-export async function getStaticProps() {
-  const categories = ["Art", "Photography", "Design"]; // Replace with actual categories from your database
-  return {
-    props: { categories },
-  };
-}
-
-

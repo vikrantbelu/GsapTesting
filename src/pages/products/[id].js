@@ -12,40 +12,56 @@ const ProductPage = ({ product }) => {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "left",
           alignItems: "center",
           padding: "20px",
         }}
       >
         <button
+          //add animations
+
           style={{
             backgroundColor: "black",
             color: "white",
             padding: "10px 20px",
             borderRadius: "5px",
             cursor: "pointer",
+            height: "100%",
+            width: " auto",
           }}
           onClick={() => window.history.back()}
         >
-          {/* Back button icon */}
+          {/* back button left arrow white color*/}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            width="24"
-            height="24"
+            fill="white"
+            width="24px"
+            height="24px"
           >
-            <path fill="none" d="M0 0h24v24H0z" />
-            <path
-              d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z"
-              fill="white"
-            />
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
           </svg>
         </button>
+
+        {/* center title */}
+
+        <h1
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "20px",
+          }}
+          className="title"
+        >
+          Back to {product.category}
+        </h1>
       </div>
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          // justifyContent: "center",
           alignItems: "center",
           padding: "20px",
         }}

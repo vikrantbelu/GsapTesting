@@ -1,60 +1,90 @@
 import React from "react";
 import Double from "../../components/Double"; // Adjust the path as needed
 import Layout from "@/components/layout";
+import { height } from "@/components/Header/headeranim";
+import { Link } from "react-router-dom";
 
-const CategoryPage = ({ products, slug }) => {
+const CategoryPage = ({ products, slug }, suppressHydrationWarning) => {
   return (
     <Layout>
       <div>
         <br></br>
-        <h1>
+        <h2>
           <button
+            //add animations
+
             style={{
               backgroundColor: "black",
               color: "white",
-              padding: "5px 10px",
-              borderRadius: "40%",
+              padding: "10px 20px",
+              borderRadius: "5px",
               cursor: "pointer",
+              height: "100%",
+              width: " auto",
             }}
             onClick={() => window.history.back()}
           >
-            {/* Back button icon */}
+            {/* back button left arrow white color*/}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              width="12"
-              height="12"
+              fill="white"
+              width="24px"
+              height="24px"
             >
-              <path fill="none" d="M0 0h24v24H0z" />
-              <path
-                d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z"
-                fill="white"
-              />
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
             </svg>
           </button>
+          {""}
+          Back to All Categories
+        </h2>
+        {/* div that has bottom border and text  */}
 
-          {slug}
-        </h1>
-        {products.length > 0 ? (
-          <>
-            {products.map((product, index) => {
-              // Group products in pairs
-              if (index % 2 === 0) {
-                const pair = [product, products[index + 1]]; // Get the next product for pairing
-                return (
-                  <Double
-                    key={index}
-                    projects={pair}
-                    reversed={index % 4 !== 0}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "20px",
+            borderBottom: "1px solid black",
+          }}
+        >
+          <h1>{slug}</h1>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+            padding: "20px",
+          }}
+        >
+          {/* <Link href={`/products/${product._id}`}> */}
+          {products.length > 0 ? (
+            products.map((product) => (
+              <div key={product._id}>
+                <a
+                  style={{ textDecoration: "none", color: "black" }}
+                  href={`/products/${product._id}`}
+                >
+                  <img
+                    src={product.imageUrl}
+                    alt={product.title}
+                    style={{ width: "200px" }}
                   />
-                );
-              }
-              return null; // Skip rendering for odd indexed items
-            })}
-          </>
-        ) : (
-          <p>No products found in this category.</p>
-        )}
+                  <h2>{product.title}</h2>
+                  <p>{product.description}</p>
+                  <p>Available Sizes: {product.availableSizes.join(", ")}</p>
+                  <p>Category: {product.category}</p>
+                </a>
+              </div>
+            ))
+          ) : (
+            <p>No products available.</p>
+          )}
+        </div>
       </div>
     </Layout>
   );
