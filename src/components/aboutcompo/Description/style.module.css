@@ -1,10 +1,18 @@
+@font-face {
+    font-family: 'Arimo';
+    src: url('/fonts/Arimo-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal; /* Adjust as necessary for variable fonts */
+    font-style: normal; /* Adjust as necessary for variable fonts */
+}
+
 .description{
     position: relative;
     color: white;
-    font-size: 3vw;
-    text-transform: uppercase;
+    font-size: 2.5vw;
+    /* text-transform: uppercase; */
     margin-top: 30vw;
     margin-left: 10vw;
+    font-family: 'Arimo', sans-serif;
 }
 .description p{
     margin: 0px;

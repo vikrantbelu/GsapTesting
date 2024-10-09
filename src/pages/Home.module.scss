@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'MagtisExtraBold';
+    src: url('../../fonts/Magtis-ExtraBold-free\ personal\ use.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hypebeast';
+    src: url('../../fonts/hypebeast\ Free\ Font\ .otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .main {
     padding: 20px;
 }
@@ -31,13 +45,15 @@
         z-index: 2; // Ensure content is above the overlay
 
         h1 {
-            font-size: 3rem;
+            font-size: 7rem;
             margin-bottom: 10px;
+            font-family: 'MagtisExtraBold', sans-serif;
         }
 
         p {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin-bottom: 60px;
+            font-family: 'Hypebeast', sans-serif;
         }
 
         .ctaButton {
@@ -46,6 +62,7 @@
             color: white;
             border: none;
             cursor: pointer;
+            font-size: 17px;
             transition: background-color 0.3s;
             text-decoration: none;
             &:hover {

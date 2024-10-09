@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'MagtisExtraBold';
+    src: url('../../fonts/Magtis-ExtraBold-free\ personal\ use.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;

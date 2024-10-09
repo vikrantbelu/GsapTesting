@@ -5,8 +5,20 @@ import PageTransition from "@/components/PageTransition";
 import Preloader from "@/components/pagepreloader/preloader";
 import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
+// import localFont from "next/font/local";
+
+
+
 const inter = Inter({ subsets: ["latin"] });
+
+// const myFont = localFont({
+//   src: "./fonts/heading.otf",
+//   variable: "--font-heading",
+// });
+
+
 export default function App({ Component, pageProps }) {
+  
   const router = useRouter();
   const [loading, setLoading] = useState(true); // State to manage loading
 

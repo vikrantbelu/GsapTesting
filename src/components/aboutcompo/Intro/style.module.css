@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'MagtisExtraBold';
+    src: url('../../../../fonts/Magtis-ExtraBold-free\ personal\ use.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
 .homeHeader{
     position: relative;
     width: 100%;
@@ -30,6 +39,7 @@
     z-index: 3;
     text-align: center;
     white-space: nowrap;
+    font-family: 'MagtisExtraBold', sans-serif;
 }
 
 .introImage{

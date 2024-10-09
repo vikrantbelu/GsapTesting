@@ -14,8 +14,8 @@ const CollectionCategoryPage = ({ products, slug }) => {
             products.map((product) => (
               <div key={product._id}>
                 <h2>{product.title}</h2>
-                <p>{product.description}</p>
-                <p>Available Sizes: {product.availableSizes.join(", ")}</p>
+                {/* <p>{product.description}</p>
+                <p>Available Sizes: {product.availableSizes.join(", ")}</p> */}
                 <img
                   src={product.imageUrl}
                   alt={product.title}

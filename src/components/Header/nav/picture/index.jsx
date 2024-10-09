@@ -7,23 +7,14 @@ import styles from './picture.module.scss';
 import { opacity } from '../../headeranim';
 import links from '../../nav';
 
-export default function Picture({src, selectedLink}) {
+export default function Index({src, selectedLink}) {
   return (
-    <motion.div variants={opacity} initial="initial" animate={selectedLink.isActive ? "open" : "closed"} className={styles.imageContainer}>
-      {/* {links.map((link)=>{
-        return (
-          <Image
-          src={link.src}
-          fill={true}
-          alt="image"
-          />
-        )
-      })} */}
-        {/* <Image 
-        src={`${src}`}
+    <motion.div variants={opacity} initial="initial" animate={selectedLink ? "open" : "closed"} className={styles.imageContainer}>
+        <Image 
+        src={`/aboutpageimages/${src}`}
         fill={true}
         alt="image"
-        /> */}
+        />
     </motion.div>
   )
 }
