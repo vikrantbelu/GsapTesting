@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.links}>
           <Link href="/">Home</Link>
-          <Link href="/gallery">Gallery</Link>
+          <Link href="/collection">Collections</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
         </div>

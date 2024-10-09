@@ -5,6 +5,9 @@
     color: white; /* White text */
     padding: 20px 0;
     text-align: center;
+//    keep this component at the bottom using calc
+    margin-top: calc(20vh - 100px);
+   
 }
 
 .container {

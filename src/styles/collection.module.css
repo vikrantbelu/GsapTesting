@@ -9,13 +9,16 @@
 .container {
   display: flex;
   height: 100vh;
-  background-image: url("https://images.pexels.com/photos/26150745/pexels-photo-26150745/free-photo-of-green-grassland-with-trees-in-countryside.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+  width: 100%;
+  background-color: white;
+  /* background-image: url("https://images.pexels.com/photos/26150745/pexels-photo-26150745/free-photo-of-green-grassland-with-trees-in-countryside.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"); */
   background-size: cover; /* Ensures the image covers the entire container */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
 .collectionContainer {
+    
   width: 100%;
 }
 
@@ -27,10 +30,11 @@
 }
 
 .collectionContainer div {
-  /* border-top: 1px solid black; */
+  border-top: 1px solid black;
   cursor: pointer;
   position: relative;
   margin-bottom: -2vw;
+
   /* background-color: white; */
 }
 
@@ -49,9 +53,49 @@
 .linkz {
   text-decoration: none; /* Remove underline */
   color: inherit; /* Inherit color from parent element */
+  background-color: aliceblue;
 }
 
 .linkz:hover {
   text-decoration: none;
   /* Ensure no underline on hover */
+}
+
+@media screen and (max-width: 600px) {
+
+    .heading {
+        font-size: 10vw;
+
+    margin-top: 10px;
+    }
+
+    .collectionContainer div p {
+        font-size: 7vw;
+    }
+
+    .linkz {
+        text-decoration: none; /* Remove underline */
+        color: inherit; /* Inherit color from parent element */
+    }
+
+    .linkz:hover {
+        text-decoration: none;
+        /* Ensure no underline on hover */
+    }
+    .container {
+        display: grid;
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+    }
+    .collectionContainer div  {
+        border-top: 1px solid black;
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 2vw;
+        padding: 10px;
+    
+        /* background-color: white; */
+    }
+    
 }

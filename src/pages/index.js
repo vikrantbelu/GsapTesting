@@ -4,7 +4,11 @@ import Link from "next/link";
 export default function Home() {
   return (
     <Layout>
-      <div className="website-content">
+      <div
+        style={{
+          width: "100%",
+        }}
+      >
         <main className={styles.main}>
           {/* Hero Section */}
           <section className={styles.hero}>
