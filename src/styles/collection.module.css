@@ -1,59 +1,57 @@
 @font-face {
-    font-family: 'MagtisExtraBold';
-    src: url('../../fonts/Magtis-ExtraBold-free\ personal\ use.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: "MagtisExtraBold";
+  src: url("../../fonts/Magtis-ExtraBold-free\ personal\ use.otf")
+    format("opentype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 .container {
-    display: flex; 
-    height: 100vh;
-    background-image: url('../../public/art/IMG_9680.jpeg');
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+  display: flex;
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/26150745/pexels-photo-26150745/free-photo-of-green-grassland-with-trees-in-countryside.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
-
-
-.collectionContainer{
-    width: 100%;
+.collectionContainer {
+  width: 100%;
 }
 
-.heading{
-    margin-bottom: 30px;
-    font-size: 7vw;
-    font-weight: 800;
-    font-family: 'MagtisExtraBold', sans-serif;
+.heading {
+  margin-bottom: 30px;
+  font-size: 7vw;
+  font-weight: 800;
+  font-family: "MagtisExtraBold", sans-serif;
 }
 
-.collectionContainer div{
-    /* border-top: 1px solid black; */
-    cursor: pointer;
-    position: relative;
-    margin-bottom: -2vw;
-    /* background-color: white; */
+.collectionContainer div {
+  /* border-top: 1px solid black; */
+  cursor: pointer;
+  position: relative;
+  margin-bottom: -2vw;
+  /* background-color: white; */
 }
 
-.collectionContainer div p{
-    background:none;
-    margin: 0px;
-    font-size: 5vw;
-    padding-left: 10px;
-    font-family: 'MagtisExtraBold', sans-serif;
-    pointer-events: none;
+.collectionContainer div p {
+  background: none;
+  margin: 0px;
+  font-size: 5vw;
+  padding-left: 10px;
+  font-family: "MagtisExtraBold", sans-serif;
+  pointer-events: none;
 }
-.collection{
-
-    justify-content: center;
+.collection {
+  justify-content: center;
 }
 
 .linkz {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit color from parent element */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent element */
 }
 
 .linkz:hover {
-    text-decoration: none;
-     /* Ensure no underline on hover */
+  text-decoration: none;
+  /* Ensure no underline on hover */
 }
