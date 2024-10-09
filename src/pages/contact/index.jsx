@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "./Contact.module.scss"; // Create this file for your styles
 import Layout from "@/components/layout";
+import ContactPage from "@/components/contactpage";
 const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -52,7 +53,7 @@ const Contact = () => {
   return (
     <Layout>
       <div className={styles.contactContainer}>
-        <h1>Contact Us</h1>
+        <h1 className={styles.head}>Contact Us</h1>
         <form onSubmit={handleSubmit} className={styles.contactForm}>
           <input
             type="text"
@@ -103,6 +104,7 @@ const Contact = () => {
         />
         </svg> */}
       </div>
+      <ContactPage/>
     </Layout>
   );
 };
