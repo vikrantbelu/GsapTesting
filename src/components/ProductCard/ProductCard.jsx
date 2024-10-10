@@ -13,11 +13,11 @@ const ProductCard = ({ product }) => {
             className={styles.cardImage}
           />
           <h2 className={styles.cardTitle}>{product.title}</h2>
-          <p className={styles.cardDescription}>{product.description}</p>
+          {/* <p className={styles.cardDescription}>{product.description}</p> */}
           <p className={styles.cardSizes}>
             Available Sizes: {product.availableSizes.join(", ")}
           </p>
-          <p className={styles.cardCategory}>Category: {product.category}</p>
+          {/* <p className={styles.cardCategory}>Category: {product.category}</p> */}
         </div>
       </Link>
     </div>

@@ -7,38 +7,18 @@ const ProductPage = ({ product }) => {
   if (!product) {
     return <p>Product not found.</p>;
   }
+
   const message = `Hello, I am interested in your painting - ${product.title}`;
   const url = `${process.env.NEXT_PUBLIC_BASE_URL}products/${product._id}`;
-  return (
-    <Layout>
-      {/* div that acts as back button to return to current category */}
-      <div
-        className={styles.container}
-        style={{ width: "100%", padding: "20px" }}
-      >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "left",
-            alignItems: "center",
-            padding: "20px",
-          }}
-        >
-          <button
-            //add animations
 
-            style={{
-              backgroundColor: "black",
-              color: "white",
-              padding: "10px 20px",
-              borderRadius: "5px",
-              cursor: "pointer",
-              height: "100%",
-              width: " auto",
-            }}
+  return (
+    <Layout title={product.title}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <button
+            className={styles.backButton}
             onClick={() => window.history.back()}
           >
-            {/* back button left arrow white color*/}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -47,82 +27,39 @@ const ProductPage = ({ product }) => {
               height="24px"
             >
               <path d="M0 0h24v24H0V0z" fill="none" />
-              <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+              <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6l6 6l1.41-1.41z" />
             </svg>
-          </button>
-
-          {/* center title */}
-
-          <h1
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              padding: "20px",
-            }}
-            className="title"
-          >
             Back to {product.category}
-          </h1>
+          </button>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "top",
-            width: "100%",
-            padding: "20px",
-          }}
-        >
-          <div
-            style={{
-              display: "inline",
-              alignItems: "center",
-              textAlign: "center",
-              alignItems: "center",
-            }}
-          >
+        <br></br>
+        <div className={styles.productList}>
+          <div className={styles.productImageContainer}>
             <img
               src={product.imageUrl}
               alt={product.title}
-              style={{ width: "300px", height: "auto", marginRight: "20px" }}
+              className={styles.productImage}
             />
-            <br></br>
-            <br></br>
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <p>Like What you see? Contact us </p>
+            <div className={styles.contactContainer}>
+              <p>Like what you see? Contact us:</p>
               <WhatsAppButton
                 phoneNumber="+919157179157"
-                const
-                message={message + " checked at " + url}
+                message={`${message} checked at ${url}`}
               />
             </div>
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "inherit",
-              padding: "20px",
 
-              height: "500px",
-
-              justifyContent: "",
-            }}
-          >
-            <div>
-              <h1>{product.title}</h1>
-              <br></br>
-            </div>
-            <u>
-              <p>{product.category}</p>
-            </u>
+          <div className={styles.productDetails}>
+            <h1 className={styles.productTitle}>{product.title}</h1>
+            {/* <u>
+              <p className={styles.productCategory}>{product.category}</p>
+            </u> */}
             {product.availableSizes && product.availableSizes.length > 0 ? (
-              <p>Available Sizes: {product.availableSizes.join(", ")}</p>
+              <code>Available Sizes: {product.availableSizes.join(", ")}</code>
             ) : (
               <p>No sizes available.</p>
             )}
-            <div style={{ marginTop: "10px", textDexoration: "" }}>
+            <div className={styles.productDescription}>
               <p>{product.description}</p>
             </div>
           </div>
@@ -133,11 +70,10 @@ const ProductPage = ({ product }) => {
 };
 
 export async function getServerSideProps({ params }) {
-  const { id } = params; // This can be either ID or slug
-
+  const { id } = params;
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/products?id=${id}`
-  ); // Update API to fetch by ID
+  );
   const product = await res.json();
 
   return {

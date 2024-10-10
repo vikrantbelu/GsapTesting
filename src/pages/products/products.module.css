@@ -1,5 +1,124 @@
+/* products.module.css */
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .backButton {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .backButton svg {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  .productList {
+    display: flex;
+    justify-content: center; /* Center items */
+    align-items: flex-start; /* Align items at the top */
+  }
+  
+  .productImageContainer {
+    display: inline-flex; /* Use inline-flex for better alignment */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items */
+  }
+  
+  .productImage {
+    width: 300px; /* Fixed width for image */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .contactContainer {
+    display: flex;
+    align-items: center; /* Center items vertically */
+  }
+  
+  .productDetails {
+    display: flex;
+    width: 600px;
+    align-items: center;
+    flex-direction: column; /* Stack details vertically */
+    padding-left: 20px; /* Add padding for spacing */
+  }
+  
+  .productTitle {
+    font-size: 2em; /* Larger font size for title */
+  }
+  
+  .productCategory {
+    font-weight: bold; /* Bold category text */
+  }
+  
+  .productDescription {
+     margin-top:10px; 
+
+  }
+  @media screen and (max-width: 600px) {
+
+    .productDetails {
+      width: 100%; /* Full width on small screens */
+      padding-left: 0; /* Remove padding on small screens */
+    }
+
+    .productList {
+      flex-direction: column; /* Stack product details vertically on small screens */
+      align-items:center; /* Center products on small screens */
+    }
+
+    .productImageContainer {
+      align-items: center; /* Center image on small screens */
+    }   
+
+    .productImage {
+      width: 100%; /* Full width on small screens */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    .productTitle {
+      font-size: 1.5em; /* Larger font size for title on small screens */
+    }
+    
+  }
+
+/* media query for large screens */
+
+
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .productDetails {
+      width: 100%; /* Full width on small screens */
+      padding-left: 0; /* Remove padding on small screens */
+    }
+   .header {
+     flex-direction: column; /* Stack header items on small screens */
+     align-items: flex-start; /* Align items to the left */
+     padding-bottom:10px; /* Adjust padding */
+   }
+  
+   .backButton {
+     padding:8px; /* Smaller padding on mobile */
+     font-size:14px; /* Smaller font size on mobile */
+     margin-bottom:10px; /* Add margin below button for spacing */
+   }
+  
+   .productList {
+     flex-direction: column; /* Stack product details vertically on small screens */
+     align-items:center; /* Center products on small screens */
+   }
+  }
+  

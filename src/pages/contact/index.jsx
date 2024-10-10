@@ -51,7 +51,7 @@ const Contact = () => {
   };
 
   return (
-    <Layout>
+    <Layout title="Contact Us">
       <div className={styles.contactContainer}>
         <h1 className={styles.head}>Contact Us</h1>
         <form onSubmit={handleSubmit} className={styles.contactForm}>
@@ -104,7 +104,7 @@ const Contact = () => {
         />
         </svg> */}
       </div>
-      <ContactPage/>
+      <ContactPage />
     </Layout>
   );
 };

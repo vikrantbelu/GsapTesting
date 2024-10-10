@@ -17,7 +17,7 @@
 
 .backgroundImage{
     width: 100%;
-    height: 180vh;
+    height: 100vh;
     position: absolute;
     filter: brightness(60%);
 }

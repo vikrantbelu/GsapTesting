@@ -43,7 +43,7 @@ export default function Collection() {
   };
 
   return (
-    <Layout>
+    <Layout title="Art Collections">
       <div className={styles.container}>
         <div className={styles.collectionContainer}>
           <p className={styles.heading}>Collections:</p>

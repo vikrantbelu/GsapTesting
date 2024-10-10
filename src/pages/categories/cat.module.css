@@ -1,8 +1,65 @@
-@media screen and (max-width: 600px) {
-    .container {
-        display: grid;
-     
-        background-color: white;
+/* styles.module.css */
+
+.container {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .backButton {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .backButton svg {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: flex-start; /* Aligns items to the left */
+    align-items: center;
+  }
+  
+  .titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid black;
+  }
+  
+  .productList {
+    width: 100%;
+    text-align: center; /* Center text in product list */
+  }
+  
+  .productCardContainer {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center; /* Center products */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  
+  .productCard {
+    margin: 10px; /* Space between cards */
+  }
+  
+  @media (max-width: 768px) {
+    .backButton {
+      padding: 8px; /* Smaller padding on mobile */
+      font-size: 14px; /* Smaller font size on mobile */
+      width: auto; /* Allow button to adjust width */
     }
-    
-}
+  
+    .productCardContainer {
+      flex-direction: column; /* Stack cards vertically on small screens */
+      align-items: center; /* Center cards */
+      padding: 10px; /* Add some padding */
+    }
+  }
+  
