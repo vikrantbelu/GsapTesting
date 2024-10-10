@@ -3,6 +3,7 @@ import Header from "./Header";
 import style from './layout.module.css';
 import Footer from "./footer/Footer";
 
+
 export default function Layout({ children }) {
   return (
     <>
@@ -11,7 +12,7 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className={style.body}>{children}</main>
+        <main className={style.body}>{children}</main>
       <Footer />
     </>
   );
