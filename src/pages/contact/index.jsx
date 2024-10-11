@@ -5,6 +5,7 @@ import { useState } from "react";
 import styles from "./Contact.module.scss"; // Create this file for your styles
 import Layout from "@/components/layout";
 import ContactPage from "@/components/contactpage";
+
 const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
 const Contact = () => {
  const [formData, setFormData] = useState({

@@ -1,20 +1,22 @@
 .bentoGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   gap: 1rem;
   padding: 1rem;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
 }
- .contactImage {
-  grid-column: 1 / 4;
-  grid-row: 1 / 3;
+
+.mapLocation {
+  grid-column: 1 / 4; /* Span all three columns */
+  grid-row: 1 / 4; /* Span the first three rows */
   overflow: hidden;
   border-radius: 15px;
 }
- .contactForm {
-  grid-column: 4 / 4;
+
+.contactForm {
+  grid-column: 3/ 4 ;
   grid-row: 1 / 2;
   display: flex;
   flex-direction: column;
@@ -27,16 +29,18 @@
   margin-bottom: 1rem;
   text-align: center;
 }
- .contactForm input,
+
+.contactForm input,
 .contactForm textarea {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
- .contactForm textarea {
-  height: 100px;
-  resize: vertical;
+
+.message {
+  height: 160px;
+  resize: none;
 }
  .contactForm button {
   padding: 0.5rem 1rem;
@@ -50,15 +54,10 @@
  .contactForm button:hover {
   background-color: #0051a2;
 }
- .mapLocation {
-  grid-column: 4 / 4;
-  grid-row: 2 / 2;
-  overflow: hidden;
-  border-radius: 15px;
-}
+
  .phoneNumber {
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
   padding: 1rem;
   background-color: #f0f0f0;
   border-radius: 15px;
@@ -68,8 +67,8 @@
   align-items: center;
 }
  .socialIcons {
-  grid-column: 2 / span 4;
-  grid-row: 4 / 5;
+  grid-column: 1 / 4;
+  grid-row: 4 / 4;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -79,34 +78,55 @@
 }
  .socialIcons a {
   transition: transform 0.3s ease;
+  padding: 2rem;
 }
  .socialIcons a:hover {
   transform: scale(1.1);
 }
- @media (max-width: 768px) {
+ 
+@media (max-width: 1024px) { /* Tablet screens */
   .bentoGrid {
-    grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
   }
-   .contactImage,
-  .contactForm,
-  .mapLocation,
-  .phoneNumber,
+  
+  .mapLocation {
+      grid-column: 1 / -1; /* Full width on tablet */
+      grid-row: 1 / 2; /* Occupy the first row */
+  }
+
+  .contactForm, .phoneNumber {
+      grid-column: span 2; /* Each takes full width in their rows */
+  }
+
   .socialIcons {
-    grid-column: 1 / 2;
+      grid-column: span 2; /* Full width for social icons */
+      grid-row: auto; /* Adjust automatically */
   }
-   .contactImage {
-    grid-row: 1 / 2;
+}
+
+@media (max-width: 768px) { /* Mobile screens */
+  .bentoGrid {
+      grid-template-columns: 1fr; /* Single column for mobile */
+      padding: 0 0.1rem; 
   }
-   .contactForm {
-    grid-row: 2 / 3;
+
+  .mapLocation, 
+  .contactForm, 
+  .phoneNumber, 
+  .socialIcons {
+      grid-column: 1 / -1; /* All elements take full width */
   }
-   .mapLocation {
-    grid-row: 3 / 4;
+
+  .mapLocation {
+    grid-row: 1 / 2; /* Occupy the first row */
   }
-   .phoneNumber {
-    grid-row: 4 / 5;
+  .contactForm {
+      grid-row: 2 / 3; /* Occupy the second row */
   }
-   .socialIcons {
-    grid-row: 5 / 6;
+  .phoneNumber {
+      grid-row: 3 / 4; /* Occupy the third row */
+  }
+  .socialIcons {
+      grid-row: 4 / 5; /* Occupy the fourth row */
   }
 }

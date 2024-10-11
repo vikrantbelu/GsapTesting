@@ -23,16 +23,15 @@ export default function ContactPage() {
 
   return (
     <div className={styles.bentoGrid}>
-      <div className={styles.contactImage}>
-        <Image
-          src="/art/IMG_9680.jpeg"
-          alt="Contact Us"
-          width={400}
-          height={300}
-          layout="responsive"
-        />
-      </div>
-      {/* 
+        <div className={styles.mapLocation}>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30127.001558584205!2d72.77240997137568!3d19.287792895476095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b23d86e4a857%3A0xa86276883ec5600f!2sDongri%2C%20Uttan%2C%20Mira%20Bhayandar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1728665338061!5m2!1sen!2sin"
+                width="1040"
+                height="600"
+                style={{ border: 0, borderRadius: '15px' }}
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
+        </div>
       <form className={styles.contactForm}>
         <h2>Get in Touch with us</h2>
         <input
@@ -52,23 +51,14 @@ export default function ContactPage() {
           required
         />
         <textarea
+          className={styles.message}
           name="message"
           placeholder="Your Message"
           value={formData.message}
-          
           required
         ></textarea>
         <button type="submit">Send Message</button>
-      </form> */}
-      <div className={styles.mapLocation}>
-        <Image
-          src="/placeholder.svg?height=300&width=400"
-          alt="Map Location"
-          width={400}
-          height={300}
-          layout="responsive"
-        />
-      </div>
+      </form>
       <div className={styles.phoneNumber}>
         <h3>Call Us</h3>
         <p>+1 (123) 456-7890</p>
@@ -106,18 +96,6 @@ export default function ContactPage() {
           <Image
             src="/placeholder.svg?height=24&width=24"
             alt="Instagram"
-            width={24}
-            height={24}
-          />
-        </Link>
-        <Link
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="/placeholder.svg?height=24&width=24"
-            alt="LinkedIn"
             width={24}
             height={24}
           />
