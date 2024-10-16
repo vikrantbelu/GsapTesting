@@ -1,8 +1,9 @@
+'use client';
 import React, { useLayoutEffect, useRef } from 'react'
-import styles from './style.module.css'
-import Image from 'next/image'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import styles from './style.module.css';
+import Image from 'next/image';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 export default function Intro() {
 
@@ -16,8 +17,8 @@ export default function Intro() {
             scrollTrigger: {
                 trigger: homeHeader.current,
                 scrub: true,
-                start: "top top", // Start when the top of homeHeader hits the top of the viewport
-                end: "bottom top", // End when the bottom of homeHeader hits the top of the viewport
+                start: "top top", 
+                end: "bottom top",
             }
         })
         timeline
@@ -25,6 +26,7 @@ export default function Intro() {
             .to(backgroundImage.current, { clipPath: `inset(0%)`, duration: 1 }, "<")
             .to(introImage.current, { height: "200px", duration: 1 }, 0);
     },[])
+
     return (
         <div ref={homeHeader} className={styles.homeHeader}>
             <div className={styles.backgroundImage} ref={backgroundImage}>
