@@ -56,12 +56,11 @@ const ProductPage = ({ product }) => {
             </u> */}
             {product.availableSizes && product.availableSizes.length > 0 ? (
               <>
-                <h3> Price:</h3>
-                <h4>
+                <h4> Price: {" "} 
                   {product.availableSizes.join(", ")}/- INR <t> | </t>{" "}
-                  {product.availableSizes * 0.012}/- USD <t> | </t>
-                  {product.availableSizes * 0.011}/- EUR <t> | </t>{" "}
-                  {product.availableSizes * 0.0091}/- GBP
+                  {product.availableSizes * 0.0118934}/- USD <t> | </t>
+                  {product.availableSizes * 0.0109864}/- EUR <t> | </t>{" "}
+                  {product.availableSizes * 0.0091408}/- GBP
                 </h4>
               </>
             ) : (
