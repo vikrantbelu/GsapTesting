@@ -50,7 +50,7 @@
   .productDetails {
     display: flex;
     width: 600px;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column; /* Stack details vertically */
     padding-left: 20px; /* Add padding for spacing */
   }
