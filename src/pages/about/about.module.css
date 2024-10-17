@@ -66,10 +66,10 @@
 }
 
 .sbiographyContainer h2{
-    opacity: 0;
+    opacity: 1;
     margin-bottom: 10px;
     font-size: 3vw;
 }
 .sbiographyContainer p {
-    opacity: 0; /* Start hidden for animation */
+    opacity: 1; /* Start hidden for animation */
 }

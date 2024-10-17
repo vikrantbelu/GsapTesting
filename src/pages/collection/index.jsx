@@ -34,7 +34,7 @@ export default function Collection() {
  const manageMouseEnter = (e, index) => {
    gsap.to(e.target, {
      top: "-2vw",
-     backgroundColor: "transparent", // Adjust color as needed
+     backgroundColor: "white", // Adjust color as needed
      duration: 0.3,
    });
  };

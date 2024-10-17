@@ -102,22 +102,52 @@ Immersionism represents a striking fusion of technique and emotional depth, show
 
         <div className={styles.gridContainer}>
           <div className={styles.imageContainer}>
-            <Image ref={imageRef} src="/self.jpeg" alt="About Me" width={600} height={650} />
+            <Image
+              ref={imageRef}
+              src="/self.jpeg"
+              alt="About Me"
+              width={500}
+              height={650}
+            />
           </div>
           <div className={styles.biographyContainer}>
             <h2 ref={titleRef}>Biography:</h2>
-            <div ref={biographyRef} style={{ whiteSpace: 'pre-wrap', textAlign: 'justify', fontSize: '1.5rem', paddingRight: '20px' }}></div>
+            <div
+              ref={biographyRef}
+              style={{
+                whiteSpace: "pre-wrap",
+                textAlign: "justify",
+                fontSize: "1.5rem",
+                paddingRight: "20px",
+              }}
+            ></div>
           </div>
         </div>
-
+      </div>
+      <div className={styles.scontainer}>
         {/* Second Biography Container */}
         <div className={styles.sgridContainer}>
           <div className={styles.sbiographyContainer}>
-            <h2>Definition: </h2>
-            <div ref={secondBiographyRef} style={{ whiteSpace: 'pre-wrap', textAlign: 'justify', fontSize: '1.3rem', paddingLeft: '110px' }}></div>
+            <h2>What is Immersionism: </h2>
+
+            <div
+              ref={secondBiographyRef}
+              style={{
+                whiteSpace: "pre-wrap",
+                textAlign: "justify",
+                fontSize: "1.3rem",
+                paddingLeft: "110px",
+              }}
+            ></div>
           </div>
           <div className={styles.simageContainer}>
-            <Image ref={secondImageRef} src="/abimmer.jpeg" alt="Second Biography" width={700} height={750} />
+            <Image
+              ref={secondImageRef}
+              src="/abimmer.jpeg"
+              alt="Second Biography"
+              width={700}
+              height={750}
+            />
           </div>
         </div>
       </div>
