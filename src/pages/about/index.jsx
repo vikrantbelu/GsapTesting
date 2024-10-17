@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Image from 'next/image';
 
-export default function Home() {
+export default function About() {
   const headingRef = useRef(null);
   const imageRef = useRef(null);
   const biographyRef = useRef(null);
@@ -112,12 +112,12 @@ Immersionism represents a striking fusion of technique and emotional depth, show
 
         {/* Second Biography Container */}
         <div className={styles.sgridContainer}>
-          <div className={styles.biographyContainer}>
+          <div className={styles.sbiographyContainer}>
             <h2>Definition: </h2>
-            <div ref={secondBiographyRef} style={{ whiteSpace: 'pre-wrap', textAlign: 'justify', fontSize: '1.2rem', paddingLeft: '110px' }}></div>
+            <div ref={secondBiographyRef} style={{ whiteSpace: 'pre-wrap', textAlign: 'justify', fontSize: '1.3rem', paddingLeft: '110px' }}></div>
           </div>
-          <div className={styles.imageContainer}>
-            <Image ref={secondImageRef} src="/abimmer.jpeg" alt="Second Biography" width={600} height={650} />
+          <div className={styles.simageContainer}>
+            <Image ref={secondImageRef} src="/abimmer.jpeg" alt="Second Biography" width={700} height={750} />
           </div>
         </div>
       </div>

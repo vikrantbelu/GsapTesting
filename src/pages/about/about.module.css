@@ -33,12 +33,6 @@
     
 }
 
-.image {
-    max-width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
-    opacity: 0; /* Start hidden for animation */
-}
-
 .biographyContainer {
     display: flex;
     flex-direction: column;
@@ -58,4 +52,24 @@
     height: 100vh;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
     gap: 20px; /* Space between columns */
+}
+
+.simageContainer {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.sbiographyContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.sbiographyContainer h2{
+    opacity: 0;
+    margin-bottom: 10px;
+    font-size: 3vw;
+}
+.sbiographyContainer p {
+    opacity: 0; /* Start hidden for animation */
 }
