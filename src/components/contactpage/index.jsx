@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import styles from './style.module.css'
 
+const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -10,6 +11,49 @@ export default function ContactPage() {
     email: "",
     message: "",
   });
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        ...formData,
+        access_key: accessKey, // Access key as a string
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      setSuccessMessage(
+        "Thank you for contacting us! We'll get back to you soon."
+      );
+      setErrorMessage("");
+      setFormData({ name: "", email: "", message: "" }); // Reset form
+    } else {
+      setErrorMessage(
+        "There was an error sending your message. Please try again."
+      );
+      setSuccessMessage("");
+    }
+  };
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   message: "",
+  // });
 
   //   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
   //     const { name, value } = e.target
@@ -34,7 +78,7 @@ export default function ContactPage() {
           loading="lazy"
         ></iframe>
       </div>
-      <form className={styles.contactForm}>
+      {/* <form className={styles.contactForm}>
         <h2>Get in Touch with us</h2>
         <input
           type="text"
@@ -58,7 +102,38 @@ export default function ContactPage() {
           required
         ></textarea>
         <button type="submit">Send Message</button>
+      </form> */}
+      <form onSubmit={handleSubmit} className={styles.contactForm}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          width="100%"
+          height="150px"
+          resize="none"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
       </form>
+      {successMessage && <p className={styles.success}>{successMessage}</p>}
+      {errorMessage && <p className={styles.error}>{errorMessage}</p>}
       <div className={styles.phoneNumber}>
         <h3>Connect With Us</h3>
         <p>+91 91571 79157</p>
