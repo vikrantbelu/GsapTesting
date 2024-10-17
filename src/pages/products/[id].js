@@ -55,7 +55,14 @@ const ProductPage = ({ product }) => {
               <p className={styles.productCategory}>{product.category}</p>
             </u> */}
             {product.availableSizes && product.availableSizes.length > 0 ? (
-              <h3>Price: {product.availableSizes.join(", ")} INR</h3>
+              <>
+                <h3> Price:</h3>
+                <h2>
+                  {product.availableSizes.join(", ")}/- INR <br></br>
+                  {/* divide availablesizes value by 100 */}{" "}
+                  {product.availableSizes * 0.012}/- USD
+                </h2>
+              </>
             ) : (
               <p>No sizes available.</p>
             )}
