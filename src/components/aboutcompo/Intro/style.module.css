@@ -5,19 +5,16 @@
     font-style: normal;
 }
 
-
-
 .homeHeader{
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
-    
 }
 
 .backgroundImage{
     width: 100%;
-    height: max-content;
+    height: 140vh;
     position: absolute;
     filter: brightness(60%);
 }
@@ -34,12 +31,11 @@
 }
 
 .intro h1{
-    color: black;
+    color: white;
     font-size: 7vw;
     z-index: 3;
     text-align: center;
     white-space: nowrap;
-    font-family: 'MagtisExtraBold', sans-serif;
 }
 
 .introImage{
@@ -52,4 +48,12 @@
 .introImage img{
     object-fit: cover;
     object-position: top;
+}
+
+.description {
+    color: white; 
+    font-size: 2vw; 
+    text-align: center; 
+    margin-top: 10px; 
+    z-index: 3; 
 }

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-export default function Intro() {
+export default function Index() {
 
     const backgroundImage = useRef(null);
     const introImage = useRef(null);
