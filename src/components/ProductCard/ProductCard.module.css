@@ -12,7 +12,7 @@
     text-decoration: none;
     color: inherit;
     width: calc(100% - 20px); /* Full width minus margins */
-    max-width: 300px; /* Limit max width */
+    max-width: 480px; /* Limit max width */
     transition: transform 0.3s ease; /* Animation for hover effect */
   }
   
@@ -30,6 +30,7 @@
   }
   
   .cardTitle {
+    margin-top: 10px;
     font-size: 1.5em;
   }
   

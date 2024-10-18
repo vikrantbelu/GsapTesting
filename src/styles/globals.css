@@ -11,9 +11,117 @@
     font-style: normal;
 }
 
-html ,
-body{
-    height: 100%;
-    width: 100%;
-    scroll-behavior: smooth;
+/* src/components/Footer.module.scss */
+
+html,
+body {
+    height: 100%; /* Ensure full height for body */
+    margin: 0; /* Remove default margin */
+}
+
+.wrapper {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+.content {
+    flex: 1; /* Allow content to grow and take available space */
+}
+
+.footer {
+    background-color: #f4f0ea;
+    color: black; /* Change text color to black for visibility */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px; /* Limit width */
+    margin: 0 auto; /* Center align */
+    padding: 0 20px; /* Side padding */
+}
+
+.links {
+    margin-bottom: 15px;
+
+    a {
+        color: black;
+        text-decoration: none;
+        margin: 0 15px;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #ff6347; /* Tomato color on hover */
+        }
+    }
+}
+
+.socialMedia {
+    margin-bottom: 15px;
+    color: black;
+
+    a {
+        margin: 0 10px;
+
+        img {
+            width: 24px; /* Icon size */
+            height: 24px;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.1); /* Slight zoom on hover */
+            }
+        }
+    }
+}
+
+.contactInfo {
+    color: black;
+
+    p {
+        margin: 5px 0; /* Spacing between lines */
+        color: black;
+    }
+}
+/* Base styles for all devices */
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    .heading h1 {
+        font-size: 5vw; /* Responsive font size */
+    }
+
+    .gridContainer {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+
+    .biographyContainer h2 {
+        font-size: 4vw; /* Adjust heading size for smaller screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    }
+
+    .heading h1 {
+        font-size: 4vw; /* Adjust heading size for medium screens */
+    }
+}
+
+@media (min-width: 1025px) {
+    .gridContainer {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+    }
+
+    .heading h1 {
+        font-size: 3vw; /* Fixed size for large screens */
+    }
 }

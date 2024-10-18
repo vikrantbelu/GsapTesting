@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
           <h2 className={styles.cardTitle}>{product.title}</h2>
           {/* <p className={styles.cardDescription}>{product.description}</p> */}
           <p className={styles.cardSizes}>
-            Available Sizes: {product.availableSizes.join(", ")}
+            Price (INR): {product.availableSizes.join(", ")}
           </p>
           {/* <p className={styles.cardCategory}>Category: {product.category}</p> */}
         </div>

@@ -1,14 +1,21 @@
-// src/components/Footer.module.scss
+/* src/components/Footer.module.scss */
+
+
+.wrapper {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+.content {
+    flex: 1; /* Allow content to grow and take available space */
+}
 
 .footer {
     background-color: #f4f0ea;
-    color: white; /* White text */
+    color: black; /* Change text color to black for visibility */
     padding: 20px 0;
     text-align: center;
-//    keep this component at the bottom using calc
-    // margin-top: calc(100vh - 120px);
-    // top: 100vh;
-   
 }
 
 .container {
@@ -53,6 +60,7 @@
 
 .contactInfo {
     color: black;
+
     p {
         margin: 5px 0; /* Spacing between lines */
         color: black;

@@ -6,8 +6,7 @@ import Preloader from "@/components/pagepreloader/preloader";
 import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
 // import localFont from "next/font/local";
-
-
+import Footer from "@/components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +15,7 @@ const inter = Inter({ subsets: ["latin"] });
 //   variable: "--font-heading",
 // });
 
-
 export default function App({ Component, pageProps }) {
-  
   const router = useRouter();
   const [loading, setLoading] = useState(true); // State to manage loading
 
@@ -39,20 +36,23 @@ export default function App({ Component, pageProps }) {
   }, [router.events]);
 
   return (
-    <>
-      {loading && <Preloader />} {/* Show preloader when loading */}
-      <AnimatePresence mode="wait">
-        <motion.div key={router.pathname}>
-          <PageTransition>
-            <style jsx global>{`
-              html {
-                font-family: ${inter.style.fontFamily};
-              }
-            `}</style>
-            <Component {...pageProps} />
-          </PageTransition>
-        </motion.div>
-      </AnimatePresence>
-    </>
+    <div className="wrapper">
+      <div className="content">
+        {loading && <Preloader />} {/* Show preloader when loading */}
+        <AnimatePresence mode="wait">
+          <motion.div key={router.pathname}>
+            <PageTransition>
+              <style jsx global>{`
+                html {
+                  font-family: ${inter.style.fontFamily};
+                }
+              `}</style>
+              <Component {...pageProps} />
+            </PageTransition>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+      <Footer />
+    </div>
   );
 }

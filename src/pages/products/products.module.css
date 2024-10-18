@@ -35,11 +35,12 @@
     display: inline-flex; /* Use inline-flex for better alignment */
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center items */
+
   }
   
   .productImage {
-    width: 300px; /* Fixed width for image */
-    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Fixed width for image */
+    height: 640px; /* Maintain aspect ratio */
   }
   
   .contactContainer {
@@ -67,7 +68,7 @@
      margin-top:10px; 
 
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
 
     .productDetails {
       width: 100%; /* Full width on small screens */
@@ -119,6 +120,12 @@
    .productList {
      flex-direction: column; /* Stack product details vertically on small screens */
      align-items:center; /* Center products on small screens */
+   }
+   .contactContainer {
+    /* Stack contact container vertically on small screens */
+   
+     margin-top: 10px; /* Add margin for spacing */
+     margin-bottom: 10px; /* Add margin for spacing */
    }
   }
   

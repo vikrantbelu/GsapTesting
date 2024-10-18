@@ -18,8 +18,8 @@ const WhatsAppButton = ({ phoneNumber, message }) => {
       <Image
         src="/whatsapp-icon.svg" // Add an appropriate WhatsApp icon image in the public folder
         alt="WhatsApp"
-        width={48}
-        height={48}
+        width={30}
+        height={30}
       />
     </a>
   );

@@ -64,8 +64,8 @@ export default function Header() {
             <Image
               src="/whatsapp-icon.svg" // Add an appropriate WhatsApp icon image in the public folder
               alt="WhatsApp"
-              width={48}
-              height={48}
+              width={30}
+              height={30}
             />
           </p>
         </motion.div>

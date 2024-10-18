@@ -101,3 +101,61 @@
     font-size: 3vw;
     text-align: center;
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column; /* Stack header items on small screens */
+        align-items: center; /* Center items on small screens */
+    }
+    .gridContainer,
+    .sgridContainer {
+        display: flex; /* Two columns for tablets and larger screens */
+        flex-direction: column;
+        gap: 20px; /* Space between columns */
+        padding: 20px;
+    }
+
+    .tgridContainer {
+        display: flex; /* Two columns for tablets and larger screens */
+        flex-direction: column;
+        gap: 20px; /* Space between columns */
+        padding: 20px;
+    }
+
+    .heading h1 {
+        font-size: 5vw; /* Slightly smaller heading size for larger screens */
+    }
+
+    .biographyContainer h2,
+    .sbiographyContainer h2,
+    .tbiographyContainer h2 {
+        display: flex; /* Two columns for tablets and larger screens */
+        flex-direction: column;
+        gap: 20px; /* Space between columns */
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .heading h1 {
+        font-size: 4vw; /* Further reduce heading size for large screens */
+    }
+
+    .biographyContainer h2,
+    .sbiographyContainer h2,
+    .tbiographyContainer h2 {
+        font-size: 2rem; /* Fixed size for larger screens */
+        margin-bottom: 30px; /* Adjust spacing below headings */
+    }
+
+    .gridContainer,
+    .sgridContainer {
+        grid-template-columns: repeat(2, 1fr); /* Maintain two columns for larger desktops */
+    }
+
+    .tgridContainer {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for very large screens */
+    }
+}
