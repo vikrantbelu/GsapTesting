@@ -1,251 +1,205 @@
-@font-face {
-    font-family: 'MagtisExtraBold';
-    src: url('/fonts/Magtis-ExtraBold-free\ personal\ use.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
- }
- 
- 
- .container{
-    height: 100vh;
- }
- 
- 
- .heading h1{
-    color: black;
-    font-size: 6vw;
-    z-index: 3;
+/* Base Styles */
+.wrapper {
+  padding: 30px; /* Padding around the wrapper */
+}
+.theading,
+.sheading,
+.theading {
+  font-size: 2.5rem; /* Heading size */
+  margin-bottom: 20px; /* Space below headings */
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on smaller screens */
+  align-items: center; /* Center content horizontally */
+  padding: 20px;
+}
+
+.heading {
+  text-align: center; /* Center heading text */
+}
+
+.gridContainer {
+  display: flex; /* Use flexbox for side-by-side layout */
+  justify-content: space-between; /* Space between image and biography */
+  align-items: flex-start; /* Align items at the start */
+  margin-top: 20px; /* Space above the grid container */
+}
+
+/* Image Container */
+.imageContainer {
+  flex: 1; /* Allow image container to grow */
+  max-width: 500px; /* Limit maximum width of the image */
+}
+
+/* Biography Container */
+.biographyContainer {
+  flex: 1; /* Allow biography container to grow */
+  padding-left: 20px; /* Space between image and text */
+}
+
+.biographyContainer h2 {
+  opacity: 1;
+  margin-bottom: 40px;
+  font-size: 3vw;
+}
+/* Subcontainer Styles */
+.scontainer {
+    margin-top: 40px; /* Space above each subcontainer */
+    display: grid; /* Use flexbox for side-by-side layout */
+    justify-content: space-between; /* Space between image and biography */
+    align-items: flex-start; /* Align items at the start */
+    padding: 20px; /* Space above the grid container */
+}
+.tcontainer {
+  margin-top: 40px; /* Space above each subcontainer */
+  display: flex; /* Use flexbox for side-by-side layout */
+  justify-content: space-between; /* Space between image and biography */
+  align-items: flex-start; /* Align items at the start */
+  margin-top: 20px; /* Space above the grid container */
+}
+
+.sgridContainer,
+.tgridContainer {
+  display: flex; /* Use flexbox for side-by-side layout */
+  justify-content: space-between;
+}
+
+/* Biography Headings */
+.heading {
+  font-size: 2rem; /* Heading size */
+  margin-bottom: 15px; /* Space below headings */
+}
+
+.simageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.sbiographyContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.sbiographyContainer h2 {
+  opacity: 1;
+  margin-bottom: 10px;
+  font-size: 3vw;
+}
+
+.tcontainer {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Full height of the viewport */
+  padding: 20px; /* Optional padding */
+}
+
+.tgridContainer {
+  display: grid;
+  grid-template-columns: 1fr; /* Two equal columns */
+  gap: 20px; /* Space between columns */
+}
+
+.timageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.tbiographyContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.tbiographyContainer h2 {
+  opacity: 1;
+  margin-bottom: 10px;
+  font-size: 3vw;
+  text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gridContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .scontainer {
+    margin-top: 40vh;
+  }
+
+  .sgridContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+
+  .sbiographyContainer {
     text-align: center;
-    white-space: nowrap;
-    font-family: 'MagtisExtraBold', sans-serif;
-    margin-top: 20px;
-    margin-bottom: 20px;
- }
- 
- 
- .gridContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 20px; /* Space between columns */
- }
- 
- 
- .imageContainer {
-    display: flex;
-    justify-content: center;
-   
- }
- 
- 
- .biographyContainer {
-    display: flex;
-    flex-direction: column;
- }
- 
- 
- .biographyContainer h2{
-    opacity: 1;
-    margin-bottom: 10px;
-    font-size: 2vw;
- }
- 
- 
- .biographyContainer p{
-    white-space: pre-wrap;
-    text-align: justify;
-    font-size: 1.5vw;
-    padding-right: 50px;
- }
- 
- 
- .scontainer{
-    height: 100vh;
- }
+    padding: -160px;
+  }
 
- .scontainer h2{
-    opacity: 1;
-    margin-bottom: 10px;
-    font-size: 2vw;
-    padding-left: 120px;
- }
- 
- 
- .sgridContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 20px; /* Space between columns */
- }
+  .tcontainer {
+    margin-top: 60vh;
+  }
+}
 
- .sbiographyContainer {
-    display: flex;
-    flex-direction: column;
- }
- 
- 
- 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .gridContainer,
+  .sgridContainer,
+  .tgridContainer {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: center; /* Center content horizontally */
+  }
+  .theading {
+    font-size: 2rem; /* theading size */
+    margin-bottom: 25px; /* Space below theadings */
+  }
+  .biographyContainer,
+  .sbiographyContainer,
+  .tbiographyContainer {
+    padding-left: 0; /* Remove left padding on small screens */
+    text-align: center; /* Center text on small screens */
+    font-size: 1.2rem; /* Adjust font size for readability */
+  }
+  .scontainer{
+    display: contents;
+  }
+  .tcontainer{
+    margin-top: 10px;
+    padding: 20px;
+  }
+  .tcontent{
+    padding-left: 25%;
+    padding-right: 25%;
+  }
 
- .sbiographyContainer p{
-    white-space: pre-wrap;
-    text-align: justify;
-    font-size: 21px;
-    padding-left: 100px;
- }
- 
- 
- .simageContainer {
-    display: flex;
-    justify-content: center;
-   
- }
- 
- 
- .tcontainer{
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: 100vh; /* Full height of the viewport */
-    padding: 20px; /* Optional padding */
- }
- 
- 
- .tgridContainer{
-    display: grid;
-    grid-template-columns: 1fr; /* Two equal columns */
-    gap: 20px; /* Space between columns */
- }
+  .imageContainer,
+  .simageContainer,
+  .timageContainer {
+    max-width: 100%; /* Allow images to take full width on small screens */
+    margin-bottom: 20px; /* Space below images on small screens */
+  }
+}
 
- .tbiographyContainer {
-    display: flex;
-    flex-direction: column;
- }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .theading {
+    font-size: 1.8rem; /* Adjust theading size for medium screens */
+  }
+}
 
- .tbiographyContainer h2{
-    opacity: 1;
-    margin-bottom: 10px;
-    font-size: 3vw;
-    text-align: center;
- }
- 
- .timageContainer {
-    display: flex;
-    justify-content: center; 
- }
-
- .tcontent{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
- }
- 
- .tcontent p{
-    white-space: pre-wrap;
-    text-align: justify;
-    font-size: 21px;
-    max-width: 1400px;
- }
- 
- 
- /* Media Queries for Responsiveness */
- /* Responsive Styles */
- @media (max-width: 768px) {
-    .container {
-        padding: 0px;
-        height: fit-content;
-    }
-
-    .heading h1 {
-        font-size: 3rem;
-    }
-
-    .gridContainer {
-        grid-template-columns: 1fr; /* One column on smaller screens */
-    }
-
-    .imageContainer img{
-        height: 500px;
-        width: 400px;
-    }
-
-    .biographyContainer {
-        width: 100vw;
-        padding: 0;
-    }
-
-    .biographyContainer h2 {
-        font-size: 2rem;
-        text-align: center;
-        padding: 0;
-    }
-
-    .biographyContainer p {
-        font-size: 1.1rem;
-        padding: 0px 20px;
-    }
-
-    .scontainer {
-        height: fit-content;
-        width: 100vw;
-        padding: 0;
-    }
-
-    .scontainer h2 {
-        font-size: 2rem;
-        text-align: center;
-        margin-bottom: 10px;
-        padding-left: 0;
-    }
-
-    .sgridContainer {
-        grid-template-columns: 1fr; 
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .sbiographyContainer{
-        width: 100vw;
-        margin-left: -50px;
-        padding: 0;
-    }
-
-    .sbiographyContainer p {
-        text-align: justify;
-        font-size: 1.1rem;
-    }
-
-    .simageContainer{
-        height: 400px;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .secimage{
-        height: 400px;
-        width: 90vw;
-    }
-
-    .tcontainer {
-        padding: 10px;
-        height: fit-content;
-    }
-
-    .tgridContainer {
-        grid-template-columns: 1fr; /* One column on smaller screens */
-    }
-
-    .tbiographyContainer h2 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .timage{
-        height: 300px;
-        width: 90vw;
-    }
-
-    .tcontent p {
-        font-size: 1rem;
-        width: 90vw;
-    }
+@media (min-width: 1025px) {
+  .theading {
+    font-size: 2.5rem; /* Larger heading size for large screens */
+  }
 }

@@ -1,13 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./ProductCard.module.css"; // Import your CSS module
-
+import Image from "next/image";
 const ProductCard = ({ product }) => {
   return (
     <div className={styles.cardContainer}>
       <Link href={`/products/${product._id}`} className={styles.card}>
         <div className={styles.cardContent}>
-          <img
+          <Image
+            width={640}
+            height={480}
             src={product.imageUrl}
             alt={product.title}
             className={styles.cardImage}

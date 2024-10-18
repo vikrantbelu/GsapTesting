@@ -2,6 +2,7 @@ import WhatsAppButton from "@/components/Header/whatsapp";
 import Layout from "@/components/layout";
 import React from "react";
 import styles from "./products.module.css";
+import Image from "next/image";
 
 const ProductPage = ({ product }) => {
   if (!product) {
@@ -35,7 +36,9 @@ const ProductPage = ({ product }) => {
         <br></br>
         <div className={styles.productList}>
           <div className={styles.productImageContainer}>
-            <img
+            <Image
+              width={500}
+              height={650}
               src={product.imageUrl}
               alt={product.title}
               className={styles.productImage}
@@ -64,7 +67,8 @@ const ProductPage = ({ product }) => {
                   {(product.availableSizes * (0.0109864).toFixed(2)).toFixed(2)}
                   /- EUR <t> | </t>{" "}
                   {(product.availableSizes * 0.0091408).toFixed(2)}/- GBP{" "}
-                  <t> | </t> {(product.availableSizes * 0.04369).toFixed(2)}/- AED
+                  <t> | </t> {(product.availableSizes * 0.04369).toFixed(2)}/-
+                  AED
                 </h4>
               </>
             ) : (
