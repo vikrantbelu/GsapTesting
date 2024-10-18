@@ -22,7 +22,6 @@
 
 .gridContainer {
     display: grid;
-    height: 100vh;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
     gap: 20px; /* Space between columns */
 }
@@ -43,13 +42,13 @@
     margin-bottom: 40px;
     font-size: 3vw;
 }
-.biographyContainer p {
-    opacity: 0; /* Start hidden for animation */
+
+.scontainer{
+    height: 100vh;
 }
 
 .sgridContainer{
     display: grid;
-    height: 100vh;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
     gap: 20px; /* Space between columns */
 }
@@ -70,6 +69,35 @@
     margin-bottom: 10px;
     font-size: 3vw;
 }
-.sbiographyContainer p {
-    opacity: 1; /* Start hidden for animation */
+
+.tcontainer{
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full height of the viewport */
+    padding: 20px; /* Optional padding */
+}
+
+.tgridContainer{
+    display: grid;
+    grid-template-columns: 1fr; /* Two equal columns */
+    gap: 20px; /* Space between columns */
+}
+
+.timageContainer {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.tbiographyContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.tbiographyContainer h2{
+    opacity: 1;
+    margin-bottom: 10px;
+    font-size: 3vw;
+    text-align: center;
 }
