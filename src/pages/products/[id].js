@@ -60,7 +60,8 @@ const ProductPage = ({ product }) => {
                   {product.availableSizes.join(", ")}/- INR <t> | </t>{" "}
                   {product.availableSizes * 0.0118934}/- USD <t> | </t>
                   {product.availableSizes * 0.0109864}/- EUR <t> | </t>{" "}
-                  {product.availableSizes * 0.0091408}/- GBP
+                  {product.availableSizes * 0.0091408}/- GBP <t> | </t>{" "}
+                  {product.availableSizes * 0.044}/- AED
                 </h4>
               </>
             ) : (
@@ -73,7 +74,7 @@ const ProductPage = ({ product }) => {
         </div>
       </div>
     </Layout>
-  );
+  )
 };
 
 export async function getServerSideProps({ params }) {
