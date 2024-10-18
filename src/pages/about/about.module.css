@@ -1,58 +1,70 @@
-@font-face {
-    font-family: 'MagtisExtraBold';
-    src: url('/fonts/Magtis-ExtraBold-free\ personal\ use.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
+/* Base Styles */
+.wrapper {
+    padding: 30px; /* Padding around the wrapper */
+}
+.theading, .sheading, .theading {
+    font-size: 2.5rem; /* Heading size */
+    margin-bottom: 20px; /* Space below headings */
 }
 
-.container{
-    height: 100vh;
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center; /* Center content horizontally */
 }
 
-.heading h1{
-    color: black;
-    font-size: 6vw;
-    z-index: 3;
-    text-align: center;
-    white-space: nowrap;
-    font-family: 'MagtisExtraBold', sans-serif;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.heading {
+    text-align: center; /* Center heading text */
 }
 
 .gridContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 20px; /* Space between columns */
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: space-between; /* Space between image and biography */
+    align-items: flex-start; /* Align items at the start */
+    margin-top: 20px; /* Space above the grid container */
 }
 
+/* Image Container */
 .imageContainer {
-    display: flex;
-    justify-content: center;
-    
+    flex: 1; /* Allow image container to grow */
+    max-width: 500px; /* Limit maximum width of the image */
 }
 
+/* Biography Container */
 .biographyContainer {
-    display: flex;
-    flex-direction: column;
+    flex: 1; /* Allow biography container to grow */
+    padding-left: 20px; /* Space between image and text */
 }
 
+<<<<<<< Updated upstream
 .biographyContainer h2{
     opacity: 1;
     margin-bottom: 40px;
     font-size: 3vw;
+=======
+/* Subcontainer Styles */
+.scontainer, .tcontainer {
+    margin-top: 40px; /* Space above each subcontainer */
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: space-between; /* Space between image and biography */
+    align-items: flex-start; /* Align items at the start */
+    margin-top: 20px; /* Space above the grid container */
+
+>>>>>>> Stashed changes
 }
 
-.scontainer{
-    height: 100vh;
+.sgridContainer, .tgridContainer {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: space-between;
 }
 
-.sgridContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 20px; /* Space between columns */
+/* Biography Headings */
+.heading {
+    font-size: 2rem; /* Heading size */
+    margin-bottom: 15px; /* Space below headings */
 }
 
+<<<<<<< Updated upstream
 .simageContainer {
     display: flex;
     justify-content: center;
@@ -135,3 +147,38 @@
         margin-top: 60vh;
     }
 }
+=======
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .gridContainer, .sgridContainer, .tgridContainer {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center; /* Center content horizontally */
+    }
+    .theading {
+        font-size: 2rem; /* theading size */
+        margin-bottom: 25px; /* Space below theadings */
+    }
+    .biographyContainer, .sbiographyContainer, .tbiographyContainer {
+        padding-left: 0; /* Remove left padding on small screens */
+        text-align: center; /* Center text on small screens */
+        font-size: 1.2rem; /* Adjust font size for readability */
+    }
+
+    .imageContainer, .simageContainer, .timageContainer {
+        max-width: 100%; /* Allow images to take full width on small screens */
+        margin-bottom: 20px; /* Space below images on small screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .theading {
+        font-size: 1.8rem; /* Adjust theading size for medium screens */
+    }
+}
+
+@media (min-width: 1025px) {
+    .theading {
+        font-size: 2.5rem; /* Larger heading size for large screens */
+    }
+}
+>>>>>>> Stashed changes

@@ -42,7 +42,16 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Vikrant Rudolf Belu. All Rights
             Reserved.
           </p>
-          <p>Email: contact@i-finearts.com</p> {/* Replace with actual email */}
+          <p>
+            Email:{" "}
+            <a
+              href="mailto:contact@i-finearts.com"
+              style={{ color: "black", textDecoration: "none" }}
+            >
+              contact@i-finearts.com{" "}
+            </a>{" "}
+          </p>{" "}
+          {/* Replace with actual email */}
         </div>
       </div>
     </footer>

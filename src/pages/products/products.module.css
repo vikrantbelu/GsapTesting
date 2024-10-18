@@ -46,6 +46,7 @@
   .contactContainer {
     display: flex;
     align-items: center; /* Center items vertically */
+    margin-top: 10px;
   }
   
   .productDetails {
