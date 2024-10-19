@@ -64,7 +64,7 @@ const ProductPage = ({ product }) => {
                   {(product.availableSizes * (0.0109864).toFixed(2)).toFixed(2)}
                   /- EUR <t> | </t>{" "}
                   {(product.availableSizes * 0.0091408).toFixed(2)}/- GBP{" "}
-                  <t> | </t> {(product.availableSizes * 0.044).toFixed(2)}/- AED
+                  <t> | </t> {(product.availableSizes * 0.04369).toFixed(2)}/- AED
                 </h4>
               </>
             ) : (
