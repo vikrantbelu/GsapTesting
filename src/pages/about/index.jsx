@@ -40,11 +40,11 @@ export default function About() {
                         <h2>What is Immersionism:</h2>
                         <div className={styles.sgridContainer}>
                             <div className={styles.sbiographyContainer}>
-                                <p><b>Immersionism: A Deep Dive into Artistic Engagement</b><br />Immersion is defined by the dictionary as being fully engaged in something. This concept resonates deeply with Vikrant's work, as his paintings reflect his in-depth reflections while he immerses himself in the creative process. This unique style has been aptly termed "Immersionism" by the artist.</p><br />
-                                <p><b>The Essence of Immersionism</b><br />In Vikrant's approach, planned textures are accentuated with spontaneous, opaque strokes. For him, the motivation behind any artwork is more significant than the motifs themselves. Through his paintings, he seeks to convey emotions and experiences that impact him, regardless of their origin.</p><br />
-                                <p><b>A Creative Challenge with Realism</b><br />A long-standing creative challenge with realism serves as the foundation of Vikrant’s artistic ability. His technique employs acrylic paint, which dries quickly and allows for free-flowing strokes on prepared textures. This method not only demonstrates energy but also embodies the essence of modern artistic expression.</p><br />
-                                <p><b>The Beauty of Oil Colors</b><br />One of the most exquisite aspects of this artistic movement is its ability to provide a closer look at oil colors on canvas. Vikrant's innovative approach to applying absorbed oil color to canvas is what distinguishes this style and sets it apart in the contemporary art scene.</p><br />
-                                <p>Immersionism represents a striking fusion of technique and emotional depth, showcasing Vikrant's unique perspective on art and creativity.</p>
+                                <p><b>Immersionism: A Deep Dive into Artistic Engagement</b><br />Immersion is defined by the dictionary as being fully engaged in something. This concept resonates deeply with Vikrant&apos;s work, as his paintings reflect his in-depth reflections while he immerses himself in the creative process. This unique style has been aptly termed &ldquo;Immersionism&ldquo; by the artist.</p><br />
+                                <p><b>The Essence of Immersionism</b><br />In Vikrant&apos;s approach, planned textures are accentuated with spontaneous, opaque strokes. For him, the motivation behind any artwork is more significant than the motifs themselves. Through his paintings, he seeks to convey emotions and experiences that impact him, regardless of their origin.</p><br />
+                                <p><b>A Creative Challenge with Realism</b><br />A long-standing creative challenge with realism serves as the foundation of Vikrant&apos;s artistic ability. His technique employs acrylic paint, which dries quickly and allows for free-flowing strokes on prepared textures. This method not only demonstrates energy but also embodies the essence of modern artistic expression.</p><br />
+                                <p><b>The Beauty of Oil Colors</b><br />One of the most exquisite aspects of this artistic movement is its ability to provide a closer look at oil colors on canvas. Vikrant&apos;s innovative approach to applying absorbed oil color to canvas is what distinguishes this style and sets it apart in the contemporary art scene.</p><br />
+                                <p>Immersionism represents a striking fusion of technique and emotional depth, showcasing Vikrant&apos;s unique perspective on art and creativity.</p>
                             </div>
                             <div className={styles.simageContainer}>
                                 <Image
@@ -67,7 +67,7 @@ export default function About() {
                                     src="/abart.jpeg"
                                     alt="Third Biography"
                                     width={1400}
-                                    height={750}
+                                    height={1024}
                                 />
                             </div>
                             <div className={styles.tcontent}>

@@ -193,6 +193,7 @@
         font-size: 2rem;
         text-align: center;
         margin-bottom: 10px;
+        padding-left: 0;
     }
 
     .sgridContainer {
@@ -201,11 +202,12 @@
         flex-direction: column-reverse;
     }
     .sbiographyContainer{
-        width: 95vw;
+        width: 100vw;
+        margin-left: -50px;
+        padding: 0;
     }
 
     .sbiographyContainer p {
-        white-space: pre-wrap;
         text-align: justify;
         font-size: 1.1rem;
     }
