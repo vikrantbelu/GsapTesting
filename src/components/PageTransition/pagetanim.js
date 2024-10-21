@@ -20,10 +20,10 @@ export const perspective = {
 
 export const slide = {
     initial: {
-        y: "100vh",
+        y: "fit-content",
     },
     enter: {
-        y: "100vh"
+        y: "fit-content"
     },
     exit: {
         y: 0,
