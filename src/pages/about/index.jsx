@@ -31,21 +31,21 @@ export default function About() {
             <div className={styles.biographyContainer}>
               <h2>Biography:</h2>
               <p>
-              Hello! I’m Vikrant, a passionate artist born in 1991 and currently thriving in the vibrant city of Mumbai (Bombay). My journey in the art world has led me to develop a unique artistic identity that I proudly call "Immersionism." This term encapsulates my belief in the profound significance of enigmatic beauty, a concept that resonates deeply within my work.
+              Hello! I&apos;m Vikrant, a passionate artist born in 1991 and currently thriving in the vibrant city of Mumbai (Bombay). My journey in the art world has led me to develop a unique artistic identity that I proudly call &ldquo;Immersionism.&ldquo; This term encapsulates my belief in the profound significance of enigmatic beauty, a concept that resonates deeply within my work.
               </p>
               <br />
               <h3>My Artistic Philosophy</h3>
               <p>
-              Art is not just a profession for me; it’s a way of life. I approach painting with a blend of meticulous thought and spontaneous energy. As I often express, "My approach to painting has always been quite slow and methodical." This philosophy allows me to create pieces that are not only dynamic but also rich in depth and meaning. My decade-long exploration of realism has fueled my creative spirit, pushing me to delve into the techniques of old masters while infusing my own introspective insights.
+              Art is not just a profession for me; it&apos;s a way of life. I approach painting with a blend of meticulous thought and spontaneous energy. As I often express, &ldquo;My approach to painting has always been quite slow and methodical.&ldquo; This philosophy allows me to create pieces that are not only dynamic but also rich in depth and meaning. My decade-long exploration of realism has fueled my creative spirit, pushing me to delve into the techniques of old masters while infusing my own introspective insights.
               </p>
               <br />
               <h3>The Magic of Oil Painting</h3>
               <p>
               My first encounter with oil paint was transformative. I realized that the slow drying time, which initially felt like a challenge, actually presented an opportunity. By embracing a quicker application, I discovered how to infuse my strokes with vibrant energy and life. This revelation allowed me to merge my understanding of opaque, spontaneous strokes on primed textures with the fluidity and luminosity of oil painting. The result? A distinctive style that embodies Immersionism—an art form that invites viewers to experience beauty on a deeper level.
               </p>
-              <h3>Let’s Connect!</h3>
+              <h3>Let&apos;s Connect!</h3>
               <p>
-              I am always eager to share my journey and collaborate with fellow art enthusiasts. Whether you’re an art lover, collector, or someone simply curious about the world of creativity, I invite you to connect with me. Together, let’s explore the enchanting realm of art and the stories it can tell!
+              I am always eager to share my journey and collaborate with fellow art enthusiasts. Whether you&apos;re an art lover, collector, or someone simply curious about the world of creativity, I invite you to connect with me. Together, let&apos;s explore the enchanting realm of art and the stories it can tell!
                 </p>
               <br />
             </div>

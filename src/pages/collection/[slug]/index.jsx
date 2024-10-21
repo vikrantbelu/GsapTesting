@@ -2,6 +2,7 @@ import Double from "@/components/double";
 import Layout from "@/components/layout";
 import styles from "@/styles/collectioncategorypage.module.scss"
 import { projects } from "@/collectioncategorydata";
+import Image from "next/image";
 
 const CollectionCategoryPage = ({ products, slug }) => {
   return (
@@ -16,10 +17,11 @@ const CollectionCategoryPage = ({ products, slug }) => {
                 <h2>{product.title}</h2>
                 {/* <p>{product.description}</p>
                 <p>Available Sizes: {product.availableSizes.join(", ")}</p> */}
-                <img
+                <Image
                   src={product.imageUrl}
                   alt={product.title}
-                  style={{ width: "200px" }}
+                  width={500}
+                  height={500}
                 />
                 <p>Category: {product.category}</p>
               </div>
