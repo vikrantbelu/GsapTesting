@@ -1,5 +1,5 @@
 // src/components/Footer.js
-
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.scss"; // Create this file for your styles
 
@@ -42,14 +42,31 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Vikrant Rudolf Belu. All Rights
             Reserved.
           </p>
-          <p>
-            Email:{" "}
+          <p
+            style={{
+              color: "black",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              marginTop: "10px",
+            }}
+          >
+            Designed by{"   "}
             <a
-              href="mailto:contact@i-finearts.com"
+              href="https://rodias.in"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{ color: "black", textDecoration: "none" }}
             >
-              contact@i-finearts.com{" "}
-            </a>{" "}
+              {" "}
+              <Image
+                style={{ marginLeft: "5px" }}
+                src="/rdl.png"
+                alt="Rodias"
+                width={100}
+                height={30}
+              />
+            </a>
           </p>{" "}
           {/* Replace with actual email */}
         </div>

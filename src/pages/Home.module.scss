@@ -17,11 +17,11 @@
 }
 
 .hero {
-    // background-image: url('../../public/hero.JPG');
-    // background-size: cover; /* Ensures the image covers the entire container */
-    // background-position: center; /* Centers the image */
-    // background-repeat: no-repeat;
-    // height: 80vh;
+    background-image: url('../../public/hero.JPG');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+ 
     width: 100%;
     display: flex;
     justify-content: center;
@@ -66,7 +66,7 @@
             position: relative; /* Position content above the video */
     z-index: 1; /* Ensure content is above video */
     text-align: center; /* Center text */
-    color: black; /* Text color for visibility */
+    color: white; /* Text color for visibility */
         }
 
         p {
@@ -76,7 +76,7 @@
             font-family: 'Hypebeast', sans-serif;
             position: relative; /* Position content above the video */
     z-index: 1; /* Ensure content is above video */
-    color: black; /* Text color for visibility */
+    color: white; /* Text color for visibility */
     text-align: center; /* Center text */
         }
 

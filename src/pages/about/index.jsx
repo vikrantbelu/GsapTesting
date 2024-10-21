@@ -2,7 +2,7 @@
 
 import styles from "./about.module.css";
 import Layout from "@/components/layout";
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,41 +27,32 @@ export default function About() {
                 height={650}
               />
             </div>
+           
             <div className={styles.biographyContainer}>
               <h2>Biography:</h2>
               <p>
-                Born in 1991, Vikrant is a resident of Bombay and works as a
-                trademark for his art. He coined the term “Immersionism,” which
-                he describes as a return to the significance of enigmatic
-                beauty. His aesthetic arises from the dynamic nature of inner
-                beauty.
+              Hello! I’m Vikrant, a passionate artist born in 1991 and currently thriving in the vibrant city of Mumbai (Bombay). My journey in the art world has led me to develop a unique artistic identity that I proudly call "Immersionism." This term encapsulates my belief in the profound significance of enigmatic beauty, a concept that resonates deeply within my work.
               </p>
               <br />
+              <h3>My Artistic Philosophy</h3>
               <p>
-                “My approach to painting has always been quite slow and
-                methodical,” he states, demonstrating his ability to complete
-                one of his works quickly while maintaining an impressive
-                dynamism. His decade-long conflict with realism has inspired
-                much of his creative output.Vikrant explored the methods of old
-                masters and applied them to his own in-depth introspective
-                study.
+              Art is not just a profession for me; it’s a way of life. I approach painting with a blend of meticulous thought and spontaneous energy. As I often express, "My approach to painting has always been quite slow and methodical." This philosophy allows me to create pieces that are not only dynamic but also rich in depth and meaning. My decade-long exploration of realism has fueled my creative spirit, pushing me to delve into the techniques of old masters while infusing my own introspective insights.
               </p>
               <br />
+              <h3>The Magic of Oil Painting</h3>
               <p>
-                When he first experimented with oil paint, he realized that
-                working quickly, something he felt compelled to do due to the
-                slow drying time, could infuse his strokes with greater energy
-                and dynamism. With the discovery of oil, he combined his
-                thorough understanding of opaque, spontaneous strokes on primed
-                textures with the light and quick techniques of oil painting,
-                ultimately creating his unique brand of Immersionism.
+              My first encounter with oil paint was transformative. I realized that the slow drying time, which initially felt like a challenge, actually presented an opportunity. By embracing a quicker application, I discovered how to infuse my strokes with vibrant energy and life. This revelation allowed me to merge my understanding of opaque, spontaneous strokes on primed textures with the fluidity and luminosity of oil painting. The result? A distinctive style that embodies Immersionism—an art form that invites viewers to experience beauty on a deeper level.
               </p>
+              <h3>Let’s Connect!</h3>
+              <p>
+              I am always eager to share my journey and collaborate with fellow art enthusiasts. Whether you’re an art lover, collector, or someone simply curious about the world of creativity, I invite you to connect with me. Together, let’s explore the enchanting realm of art and the stories it can tell!
+                </p>
               <br />
             </div>
           </div>
         </div>
         <div className={styles.scontainer}>
-          <h2>What is Immersionism:</h2>
+          <h2 className={styles.sheading}>What is Immersionism:</h2>
           <br />
           {/* <br /> */}
           <div className={styles.sgridContainer}>
@@ -127,15 +118,15 @@ export default function About() {
         </div>
         <div className={styles.tcontainer}>
           <div className={styles.tgridContainer}>
-            <div className={styles.tbiographyContainer}>
               <h2>Art</h2>
+            <div className={styles.tbiographyContainer}>
               <div className={styles.timageContainer}>
                 <Image
                   className={styles.timage}
-                  src="/abart.jpeg"
+                  src="/aboutpageimages/coll.jpg"
                   alt="Third Biography"
-                  width={1400}
-                  height={1024}
+                  width={740}
+                  height={640}
                 />
               </div>
               <div className={styles.tcontent}>

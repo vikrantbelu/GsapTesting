@@ -14,10 +14,10 @@ export default function Home() {
           {/* Hero Section */}
           <section className={styles.hero}>
             <div className={styles.heroContent}>
-              <video autoPlay muted loop className="full-screen-video">
+              {/* <video autoPlay muted loop className="full-screen-video">
                 <source src="/bg.mp4" type="video/mp4" />
                 Your browser does not support HTML5 video.
-              </video>
+              </video> */}
               <h1>Art that Speaks</h1>
               <p>“Every canvas is a journey all its own.”</p>
 
