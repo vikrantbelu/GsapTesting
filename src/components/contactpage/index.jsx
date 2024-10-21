@@ -135,12 +135,17 @@ export default function ContactPage() {
       {successMessage && <p className={styles.success}>{successMessage}</p>}
       {errorMessage && <p className={styles.error}>{errorMessage}</p>}
       <div className={styles.phoneNumber}>
-        <h3>Connect With Us</h3>
-        <p>+91 91571 79157</p>
-        <p>
-          <i className="fa fa-envelope-o" aria-hidden="true"></i>
-          <a href="mailto:contact@i-fineart.com">contact@i-fineart.com</a>
-        </p>
+        <h3>Add us to your contacts</h3>
+        <Image src="/qr.png" alt="QR" width={200} height={200} />
+
+        {/* <div className={styles.phoneNumber}> */}
+        {/* <h3>Connect With Us</h3>
+          <p>+91 91571 79157</p>
+          <p>
+            <i className="fa fa-envelope-o" aria-hidden="true"></i>
+            <a href="mailto:contact@i-fineart.com">contact@i-fineart.com</a>
+          </p> */}
+        {/* </div> */}
       </div>
       {/* <div className={styles.socialIcons}>
         <Link

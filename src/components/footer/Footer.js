@@ -15,25 +15,25 @@ const Footer = () => {
         </div>
         <div className={styles.socialMedia}>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/vikrant_belu/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src="/socials/insta.svg" alt="Instagram" />
           </a>
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/vikrant.belu/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src="/socials/fb.svg" alt="Facebook" />
           </a>
           <a
-            href="https://www.twitter.com"
+            href="https://www.youtube.com/@vikartstudio3"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/socials/yt.png" alt="Twitter" />
+            <img src="/socials/yt.png" alt="Youtube" />
           </a>
         </div>
 
