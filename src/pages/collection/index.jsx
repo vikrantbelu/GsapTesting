@@ -34,15 +34,16 @@ export default function Collection() {
  const manageMouseEnter = (e, index) => {
    gsap.to(e.target, {
      top: "-2vw",
-     backgroundColor: "white", // Adjust color as needed
+     color: "black",
+     backgroundColor: "black", // Adjust color as needed
      duration: 0.3,
    });
  };
 
-
  const manageMouseLeave = (e) => {
    gsap.to(e.target, {
      top: "0",
+     color: "black",
      backgroundColor: "transparent",
      duration: 0.3,
      delay: 0.1,
@@ -51,7 +52,7 @@ export default function Collection() {
 
 
  return (
-   <Layout>
+   <Layout title="Collections">
      <div className={styles.container}>
        <div className={styles.collectionContainer}>
          <p className={styles.heading}>Collections:</p>

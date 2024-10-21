@@ -15,7 +15,7 @@
 
 # production
 /build
-
+public/bg.MP4
 # misc
 .DS_Store
 *.pem

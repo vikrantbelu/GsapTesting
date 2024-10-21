@@ -1,6 +1,7 @@
 import Layout from "@/components/layout";
 import styles from "./Home.module.scss";
 import Link from "next/link";
+
 export default function Home() {
   return (
     <Layout title="Home">
@@ -13,6 +14,10 @@ export default function Home() {
           {/* Hero Section */}
           <section className={styles.hero}>
             <div className={styles.heroContent}>
+              <video autoPlay muted loop className="full-screen-video">
+                <source src="/bg.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
               <h1>Art that Speaks</h1>
               <p>“Every canvas is a journey all its own.”</p>
 

@@ -3,13 +3,15 @@
 import styles from "./about.module.css";
 import Layout from "@/components/layout";
 import { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function About() {
+  //   return <Layout></Layout>;
   //   return <Layout></Layout>;
 
   return (
-    <Layout>
+    <Layout title="About Me">
       <div className={styles.about}>
         <div className={styles.container}>
           <div className={styles.heading}>
@@ -60,6 +62,8 @@ export default function About() {
         </div>
         <div className={styles.scontainer}>
           <h2>What is Immersionism:</h2>
+          <br />
+          {/* <br /> */}
           <div className={styles.sgridContainer}>
             <div className={styles.sbiographyContainer}>
               <p>
@@ -109,13 +113,15 @@ export default function About() {
               </p>
             </div>
             <div className={styles.simageContainer}>
-              <Image
-                className={styles.secimage}
-                src="/abimmer.jpeg"
-                alt="Second Biography"
-                width={700}
-                height={750}
-              />
+              <Link href="/categories/Immersionism" passHref>
+                <Image
+                  className={styles.secimage}
+                  src="/abimmer.jpeg"
+                  alt="Second Biography"
+                  width={700}
+                  height={750}
+                />
+              </Link>
             </div>
           </div>
         </div>

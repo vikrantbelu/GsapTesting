@@ -58,7 +58,7 @@ const Contact = () => {
 
 
  return (
-   <Layout>
+   <Layout title="Contact Us">
      <div className={styles.contactContainer}>
        <h1 className={styles.head}>Contact Us</h1>
        {/* <form onSubmit={handleSubmit} className={styles.contactForm}>
@@ -90,7 +90,6 @@ const Contact = () => {
        {successMessage && <p className={styles.success}>{successMessage}</p>}
        {errorMessage && <p className={styles.error}>{errorMessage}</p>} */}
 
-
        {/* SVG Decoration */}
        {/* <svg
        className={styles.svgDecoration}
@@ -112,7 +111,7 @@ const Contact = () => {
        />
        </svg> */}
      </div>
-     <ContactPage/>
+     <ContactPage />
    </Layout>
  );
 };

@@ -124,7 +124,7 @@ export default function ContactPage() {
           name="message"
           placeholder="Your Message"
           width="100%"
-          height="150px"
+          height="250px"
           resize="none"
           value={formData.message}
           onChange={handleChange}

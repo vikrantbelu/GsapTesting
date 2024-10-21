@@ -39,6 +39,10 @@
   resize: none;
 }
 
+.contactForm textarea {
+  height: 200px;
+}
+
 .message {
   height: 160px;
   resize: none;
