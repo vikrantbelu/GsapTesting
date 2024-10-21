@@ -23,7 +23,7 @@ export const slide = {
         y: "100vh",
     },
     enter: {
-        y: "100vh"
+        y: "0vh"
     },
     exit: {
         y: 0,
