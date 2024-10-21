@@ -23,8 +23,8 @@ export default function PageTransition({children}){
                 <motion.div {...anim(opacity)}>
                     
                 </motion.div>
-                {children}
             </motion.div>
+                {children}
         </div>
         
     )
