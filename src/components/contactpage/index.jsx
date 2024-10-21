@@ -131,9 +131,9 @@ export default function ContactPage() {
           required
         ></textarea>
         <button type="submit">Send Message</button>
+        {successMessage && <p className={styles.success}>{successMessage}</p>}
+        {errorMessage && <p className={styles.error}>{errorMessage}</p>}
       </form>
-      {successMessage && <p className={styles.success}>{successMessage}</p>}
-      {errorMessage && <p className={styles.error}>{errorMessage}</p>}
       <div className={styles.phoneNumber}>
         <h3>Add us to your contacts</h3>
         <Image src="/qr.png" alt="QR" width={200} height={200} />

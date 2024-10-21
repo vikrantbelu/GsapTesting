@@ -167,3 +167,11 @@
       grid-row: 4 / 5; /* Occupy the fourth row */
   }
 }
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
