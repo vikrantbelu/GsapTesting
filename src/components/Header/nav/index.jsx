@@ -3,8 +3,8 @@ import styles from './nav.module.scss';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { height } from '../headeranim';
-import Body from './Body';
 import Picture from './picture';
+import Body from './body';
 
 
 const links = [

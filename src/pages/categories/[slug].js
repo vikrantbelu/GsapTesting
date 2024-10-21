@@ -1,5 +1,4 @@
 import React from "react";
-import Double from "../../components/Double"; // Adjust the path as needed
 import Layout from "@/components/layout";
 import { height } from "@/components/Header/headeranim";
 import { Link } from "react-router-dom";
