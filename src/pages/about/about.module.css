@@ -60,6 +60,7 @@
 }
 
 
+
 .scontainer{
   height: 100vh;
 }
@@ -184,6 +185,11 @@
       text-align: center;
       padding: 0;
   }
+
+  .biographyContainer h3{
+    margin-left: 20px;
+  }
+
 
   .biographyContainer p {
       font-size: 1.1rem;
