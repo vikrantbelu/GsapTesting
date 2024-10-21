@@ -18,7 +18,7 @@ export default function PageTransition({children}){
 
     return(
         <div className={style.inner}>
-            <motion.div {...anim(slide)} className={style.slide}/>
+            
             <motion.div {...anim(perspective)} className={style.page}>
                 <motion.div {...anim(opacity)}>
                         {
