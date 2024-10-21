@@ -21,8 +21,9 @@ export default function PageTransition({children}){
             <motion.div {...anim(slide)} className={style.slide}/>
             <motion.div {...anim(perspective)} className={style.page}>
                 <motion.div {...anim(opacity)}>
-                    {children}
+                    
                 </motion.div>
+                {children}
             </motion.div>
         </div>
         
