@@ -1,7 +1,7 @@
 .inner{
   background-color: transparent;
   .page{
-      background-color: white;
+      background-color: black;
   }
   .slide{
       height: fit-content;
@@ -9,7 +9,7 @@
       position: fixed;
       left: 0;
       top: 0;
-      background-color: black;
+      background-color: white;
       z-index: 1;
   }
 }
