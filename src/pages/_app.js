@@ -41,14 +41,14 @@ export default function App({ Component, pageProps }) {
         {loading && <Preloader />} {/* Show preloader when loading */}
         <AnimatePresence mode="wait">
           <motion.div key={router.pathname}>
-            <PageTransition>
+            
               <style jsx global>{`
                 html {
                   font-family: ${inter.style.fontFamily};
                 }
               `}</style>
               <Component {...pageProps} />
-            </PageTransition>
+            
           </motion.div>
         </AnimatePresence>
       </div>
